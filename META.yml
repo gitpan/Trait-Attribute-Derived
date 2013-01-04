@@ -4,7 +4,7 @@ author:
   - 'Toby Inkster <tobyink@cpan.org>'
 build_requires:
   ExtUtils::MakeMaker: 6.59
-  Test::More: 0.61
+  Trait::Attribute::Derived: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.59
 distribution_type: module
@@ -23,10 +23,15 @@ no_index:
     - t
     - xt
 requires:
+  Moose: 2.00
+  MooseX::Role::Parameterized: 0
+  Sub::Install: 0
+  Sub::NonRole: 0.002
+  namespace::autoclean: 0
   perl: 5.8.0
 resources:
   bugtracker: http://rt.cpan.org/Dist/Display.html?Queue=Trait-Attribute-Derived
   homepage: https://metacpan.org/release/Trait-Attribute-Derived
   license: http://dev.perl.org/licenses/
   repository: https://bitbucket.org/tobyink/p5-trait-attribute-derived
-version: 0.001
+version: 0.002
