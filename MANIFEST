@@ -1,5 +1,6 @@
 Changes
 COPYRIGHT
+examples/text-example-from-pod.pl
 HACKING
 inc/Module/AutoInstall.pm
 inc/Module/Install.pm

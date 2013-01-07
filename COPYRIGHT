@@ -68,7 +68,7 @@ Files: t/03meta.t
 Copyright: This software is copyright (c) 2013 by Toby Inkster.
 License: GPL-1.0+ or Artistic-1.0
 
-Files: Changes HACKING LICENSE MANIFEST.SKIP Makefile.PL README inc/Module/Package/Dist/RDF.pm meta/changes.pret meta/doap.pret meta/makefile.pret meta/people.pret
+Files: Changes HACKING LICENSE MANIFEST.SKIP Makefile.PL README examples/text-example-from-pod.pl inc/Module/Package/Dist/RDF.pm meta/changes.pret meta/doap.pret meta/makefile.pret meta/people.pret
 Copyright: Unknown
 License: Unknown
 
