@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.68.
+signed via the Module::Signature module, version 0.70.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,12 +14,12 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 9d792f2e4a1991d2233b1ec43c8a2f213be8f380 COPYRIGHT
-SHA1 efc4780e2f71d3e8cd44858b275eab8d288c9b69 Changes
+SHA1 e74417a439546d6aeb77649e1e36f983b06e85ec COPYRIGHT
+SHA1 70ec89c7aa314e795b4b0e01e1af7ca8d7fd1887 Changes
 SHA1 58e47fed556f626572681c48158a3ecd44ce179d HACKING
 SHA1 937d452c5c4069f4cda9ffaf45a33f1eb5f060e8 LICENSE
 SHA1 cb3cab7ca29a4a1386e1cbd23d918a6cd69aa990 MANIFEST
-SHA1 c4c5a38e519b354e36d6052c5f160a1eaf746efa META.yml
+SHA1 3adbbbb0199a5e176ff4c3efc11a8eb1268c3656 META.yml
 SHA1 b9d5dd0b476253d37384aed42664179605286153 Makefile.PL
 SHA1 110096155a57214e226cfa35606097128f42a5d8 README
 SHA1 09609a5bd2f03d7bf7469a00ceb6c0f8eda2279d examples/text-example-from-pod.pl
@@ -43,18 +43,18 @@ SHA1 0e0eed2e69d9583081868cf4f220068d0a018568 inc/Scalar/Util.pm
 SHA1 feb933cefe2e3762e8322bd6071a2499f3440da1 inc/YAML/Tiny.pm
 SHA1 8105c0510a773b56840995fb4dd2dc64fe9ddaee inc/unicore/Name.pm
 SHA1 36df501c7c9b73c282c5174ed54d8283b2f2cbf2 inc/utf8.pm
-SHA1 9adec18fc5271229217405166c3f854e71fc60d6 lib/Trait/Attribute/Derived.pm
-SHA1 071bbf5a9231a310e235b85a8ec88b4fce03af68 meta/changes.pret
+SHA1 b69b8dd4fbecf7b0f9abb10854103d40052d4c82 lib/Trait/Attribute/Derived.pm
+SHA1 6b3b922bd7fafd19923fa89e1865170bf933d79d meta/changes.pret
 SHA1 23abd77340ebdf4b83622013674057fac19b9fbf meta/doap.pret
-SHA1 91bf540f3742e7748537986827e75065bb413804 meta/makefile.pret
+SHA1 5163a0fef6d46510df6f25e30471d19c2772f35a meta/makefile.pret
 SHA1 a151cff74b5f29c00381a14d4ec8726e3763b6b2 meta/people.pret
 SHA1 7eac5b698bc0bd20a146222f734cbb40414faacc t/01basic.t
 SHA1 d299516adf607c2e2a6f0b3eb075796341f0fa3c t/02per_attr_source.t
 SHA1 4886d95b2ec9a53f61231998056b6d23af011fc3 t/03meta.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.10 (GNU/Linux)
+Version: GnuPG v1.4.11 (GNU/Linux)
 
-iEYEARECAAYFAlDrN/AACgkQzr+BKGoqfTnu4ACfZVZ0Kk3yCqsDNmAZIxphsCV0
-r+AAn3ywQ25Lm0NPR204BwYXEN/zWIHQ
-=N4Ym
+iEYEARECAAYFAlESepwACgkQzr+BKGoqfTm8WgCfX2GWBlim8nKz660NFXO+iQn5
+fxkAoJWe81HRSeGsdUpBwjMkQZ66L8IK
+=NGcp
 -----END PGP SIGNATURE-----
