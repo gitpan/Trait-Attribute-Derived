@@ -1,6 +1,6 @@
 NAME
-    Trait::Attribute::Derived - trait for lazy-built Moose attributes that
-    are derived from another attribute
+    Trait::Attribute::Derived - trait for lazy-built Moose attributes that are
+    derived from another attribute
 
 SYNOPSIS
        use strict;
@@ -46,8 +46,8 @@ SYNOPSIS
        done_testing;
 
 DESCRIPTION
-    It is quite common in Moose to have one attribute derived from another
-    via lazy builders. Often you will have several which are very similar:
+    It is quite common in Moose to have one attribute derived from another via
+    lazy builders. Often you will have several which are very similar:
 
        has first_name => (
           is           => 'ro',
@@ -71,39 +71,39 @@ DESCRIPTION
           (split /\s/, $self->full_name)[-1];
        }
 
-    Other examples might be an attribute holding an XML DOM tree where
-    several attributes are lazily built using XPath queries; or an attribute
-    holding a DBI database handle where several attribues are lazily built
-    by querying the database; or where one attribute holds the binary
-    contents of a file, and others are fields extracted using "unpack".
+    Other examples might be an attribute holding an XML DOM tree where several
+    attributes are lazily built using XPath queries; or an attribute holding a
+    DBI database handle where several attribues are lazily built by querying
+    the database; or where one attribute holds the binary contents of a file,
+    and others are fields extracted using `unpack`.
 
     Trait::Attribute::Derived allows you to automate some of this, reducing
     duplicated code.
 
     Trait::Attribute::Derived is a trait for Moose attributes; it a
-    parameterized role. The first step when using it is to create a variant
-    of the role with the parameters filled in.
+    parameterized role. The first step when using it is to create a variant of
+    the role with the parameters filled in.
 
        use Trait::Attribute::Derived Split => {
           fields    => { segment => 'Num' },
           processor => sub { (split)[$_{segment}] },
        };
 
-    This defines a variant called "Split". The "processor" coderef is the
+    This defines a variant called `Split`. The `processor` coderef is the
     template for deriving a lazily built attribute from a source attribute.
     Within this coderef, the special global $_ is set to the value of the
     source attribute, and the special global %_ hash contains a set of other
     fields useful in deriving the lazily built attributes.
 
     Using our example from the SYNOPSIS, $_ will be the string "Robert
-    Redford" and %_ will be a hash "(segment => 0)" when building the
-    "first_name" or "(segment => -1)" when building the "last_name".
+    Redford" and %_ will be a hash `(segment => 0)` when building the
+    `first_name` or `(segment => -1)` when building the `last_name`.
 
-    If you'd rather not use magic global variables, the coderef is also
-    passed as arguments (@_): $self, the source attribute value, and a
-    refernce to that hash.
+    If you'd rather not use magic global variables, the coderef is also passed
+    as arguments (@_): $self, the source attribute value, and a refernce to
+    that hash.
 
-    The "fields" hashref defines which fields will be available in %_ plus a
+    The `fields` hashref defines which fields will be available in %_ plus a
     type constraint for each.
 
     Then when we define the attribute itself:
@@ -114,10 +114,10 @@ DESCRIPTION
           segment       => 0,
        );
 
-    First of all we reference the "Split" trait variant; secondly we tell it
-    what source attribute to derive the first name from ("full_name");
-    lastly we tell it what segment of the name we want. This corresponds to
-    the "segment" field we defined when creating the trait variant.
+    First of all we reference the `Split` trait variant; secondly we tell it
+    what source attribute to derive the first name from (`full_name`); lastly
+    we tell it what segment of the name we want. This corresponds to the
+    `segment` field we defined when creating the trait variant.
 
     Here's another example:
 
@@ -155,8 +155,8 @@ DESCRIPTION
           );
        }
 
-    An alternative to setting "source" on each derived attribute is to set
-    it once when creating the trait variant:
+    An alternative to setting `source` on each derived attribute is to set it
+    once when creating the trait variant:
 
        use Trait::Attribute::Derived FindReplace => {
           source    => 'plain',
@@ -165,10 +165,10 @@ DESCRIPTION
        };
 
     One last detail from the SYNOPSIS is postprocessing. An attribute can
-    define a "postprocessor" coderef that executes after the "processor"
-    coderef. This takes the same parameters as the "processor" coderef (and
+    define a `postprocessor` coderef that executes after the `processor`
+    coderef. This takes the same parameters as the `processor` coderef (and
     has access to $_ and %_) but rather than operating on the source
-    attribute, operates on the output of the "processor".
+    attribute, operates on the output of the `processor`.
 
        has first_three_vowels_only => (
           traits   => [ FindReplace ],
@@ -204,8 +204,8 @@ AUTHOR
 COPYRIGHT AND LICENCE
     This software is copyright (c) 2013 by Toby Inkster.
 
-    This is free software; you can redistribute it and/or modify it under
-    the same terms as the Perl 5 programming language system itself.
+    This is free software; you can redistribute it and/or modify it under the
+    same terms as the Perl 5 programming language system itself.
 
 DISCLAIMER OF WARRANTIES
     THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
